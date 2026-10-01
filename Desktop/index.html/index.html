@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appli — Make your website delightfully human</title>
+  <meta name="description" content="Appli helps teams create personalized digital experiences that convert.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .signup-dialog{border:0;border-radius:2px;padding:42px;max-width:480px;width:calc(100% - 32px);box-shadow:0 25px 90px rgba(32,32,32,.24);color:var(--ink)}
+    .signup-dialog::backdrop{background:rgba(32,32,32,.45);backdrop-filter:blur(5px)}
+    .dialog-close{position:absolute;right:17px;top:14px;border:0;background:transparent;font-size:28px;line-height:1;cursor:pointer;color:var(--muted)}
+    .signup-dialog h2{font-family:var(--serif);font-weight:400;font-size:42px;line-height:1.02;margin:0 0 12px}.signup-dialog h2 em{font-style:italic;color:var(--orange)}
+    .signup-dialog>p{color:var(--muted);font-size:13px}.signup-form{display:grid;gap:8px;margin-top:25px}.signup-form label{font-size:11px;font-weight:700;margin-top:7px}.signup-form input{border:1px solid var(--line);padding:12px 13px;outline:0}.signup-form input:focus{border-color:var(--orange)}.signup-form .button{border:0;margin-top:15px;cursor:pointer}.form-status{color:#4eaa7c;font-size:12px;min-height:18px;margin:3px 0 0}
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Appli home"><span class="brand-mark">a</span><span>appli</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#top">Home</a><a href="#about">About</a><a href="#features">Features</a><a href="#stories">Stories</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-button" href="#contact">Get started <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <div class="mobile-menu" aria-hidden="true"><a href="#top">Home</a><a href="#about">About</a><a href="#features">Features</a><a href="#stories">Stories</a><a href="#contact">Contact</a></div>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Digital experiences, made simple</p>
+        <h1>Stay connected together in your <em>own</em> business network</h1>
+        <p class="hero-lede">Personalized experiences are proven to increase conversions. Appli makes it easy. Let's make the internet delightfully human.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#contact">Get started now <span>↗</span></a><a class="text-link" href="#features">Explore platform <span>↓</span></a></div>
+        <div class="trusted"><span>TRUSTED BY TEAMS AT</span><strong>northstar</strong><strong>W.</strong><strong>vertex</strong><strong>civic</strong></div>
+      </div>
+      <div class="hero-art reveal reveal-delay">
+        <div class="sun"></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-card main-card"><div class="card-top"><span class="mini-logo">a</span><span class="dots">•••</span></div><div class="card-graph"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="graph-label"><b>+28.4%</b><span>conversion rate</span></div></div>
+        <div class="float-card float-profile"><div class="avatar avatar-a">JR</div><div><b>Welcome, Jamie</b><small>Good to see you again</small></div><span class="check">✓</span></div>
+        <div class="float-card float-note"><span class="note-icon">✦</span><div><b>New insight</b><small>Your audience is growing</small></div></div>
+        <div class="hero-badge"><span>✹</span><b>12k+</b><small>happy customers</small></div>
+      </div>
+    </section>
+
+    <section class="intro section-pad" id="about"><div class="section-kicker">01 / The platform</div><div class="intro-layout"><h2>Finally focus on your marketing strategy and <em>delegate.</em></h2><div><p>In the old days, your website was the same for everyone. Not anymore. Appli lets you adapt your website for every audience.</p><a class="text-link" href="#features">Discover Appli <span>↗</span></a></div></div></section>
+
+    <section class="feature-strip section-pad" id="features"><div class="section-heading"><div><div class="section-kicker">02 / Built for growth</div><h2>Powerful tools.<br><em>Beautiful results.</em></h2></div><p>Everything you need to build meaningful connections with your audience, in one thoughtful place.</p></div><div class="feature-grid"><article class="feature-card peach"><span class="feature-number">01</span><div class="feature-icon">✦</div><h3>Design & creatives</h3><p>Build on-brand experiences without waiting on a developer or designer.</p><a href="#contact" aria-label="Explore design tools">↗</a></article><article class="feature-card mint"><span class="feature-number">02</span><div class="feature-icon">◌</div><h3>Audience insights</h3><p>Understand what your customers need and create moments that matter.</p><a href="#contact" aria-label="Explore audience insights">↗</a></article><article class="feature-card lilac"><span class="feature-number">03</span><div class="feature-icon">⌁</div><h3>Smart automation</h3><p>Let the busywork run itself, so you can focus on the big picture.</p><a href="#contact" aria-label="Explore smart automation">↗</a></article></div></section>
+
+    <section class="stats section-pad"><div class="stats-intro"><div class="section-kicker">03 / Our impact</div><h2>A better way to build <em>online.</em></h2></div><div class="stat"><strong>94%</strong><span>of teams save time every week</span></div><div class="stat"><strong>3.2x</strong><span>more engagement on average</span></div><div class="stat"><strong>12k+</strong><span>companies growing with Appli</span></div></section>
+
+    <section class="split-section section-pad"><div class="split-visual visual-one"><div class="window"><div class="window-bar"><span></span><span></span><span></span></div><div class="window-body"><div class="window-sidebar"></div><div class="window-content"><small>YOUR AUDIENCE</small><h4>Made for<br><em>everybody.</em></h4><div class="pill-row"><i></i><i></i><i></i></div><div class="window-line"></div><div class="window-line short"></div></div></div></div><span class="visual-caption">01 — A new point of view</span></div><div class="split-copy"><div class="section-kicker">04 / Personalization</div><h2>You have the power to personalize your <em>website coding.</em></h2><p>What if you could get all your website tasks off your plate and focus only on the fun stuff? Working with Appli allows you to scale your marketing and grow faster without becoming a designer or developer yourself.</p><a class="button button-outline" href="#contact">See how it works <span>↗</span></a></div></section>
+
+    <section class="split-section reverse section-pad"><div class="split-visual visual-two"><div class="quote-bubble">“</div><div class="mini-people"><span>ML</span><span>AK</span><span>+12</span></div><div class="bubble-lines"><i></i><i></i><i></i></div><span class="visual-caption">02 — Better together</span></div><div class="split-copy"><div class="section-kicker">05 / Collaboration</div><h2>Personalized experiences are proven to <em>increase conversions.</em></h2><p>Great work happens when people have the right tools and enough space to think. Bring your team together, share ideas, and turn them into work you are proud of.</p><a class="text-link" href="#stories">Meet our community <span>↗</span></a></div></section>
+
+    <section class="testimonial section-pad" id="stories"><div class="section-kicker">06 / Kind words</div><div class="testimonial-header"><h2>Amazing customer <em>review.</em></h2><div class="slider-controls"><button class="slider-btn prev" aria-label="Previous testimonial">←</button><button class="slider-btn next" aria-label="Next testimonial">→</button></div></div><div class="testimonial-body"><div class="quote-mark">“</div><blockquote id="quote">Appli presents your services with flexible, convenient and composed layouts. You can select your favorite layouts with unlimited customization possibilities. Pixel-perfect details make it feel like it was made just for us.</blockquote><div class="person"><div class="avatar avatar-b">RB</div><div><strong id="person-name">Robert Brown</strong><span id="person-role">Creative director at Northstar</span></div></div></div></section>
+
+    <section class="cta section-pad" id="contact"><div class="cta-shape shape-left"></div><div class="cta-shape shape-right"></div><div class="section-kicker">07 / Let’s work together</div><h2>Start finding your<br><em>dream workflow.</em></h2><p>The automated process starts as soon as you get started. The outcome is a clearer path to the work that matters.</p><button class="button button-light js-open-dialog" type="button">Get started now <span>↗</span></button></section>
+  </main>
+
+  <footer class="footer section-pad"><div class="footer-top"><a class="brand" href="#top"><span class="brand-mark">a</span><span>appli</span></a><p>Make the internet<br>delightfully human.</p><a class="back-top" href="#top">Back to top <span>↑</span></a></div><div class="footer-links"><div><h4>Our solutions</h4><a href="#features">Design & creatives</a><a href="#features">Telecommunication</a><a href="#features">Restaurant</a><a href="#features">Programming</a></div><div><h4>Company</h4><a href="#about">About us</a><a href="#stories">Our stories</a><a href="#contact">Careers</a><a href="#contact">Contact</a></div><div><h4>Support</h4><a href="#contact">Help center</a><a href="#contact">Documentation</a><a href="#contact">Privacy policy</a><a href="#contact">Terms</a></div><div class="newsletter"><h4>Stay in the loop</h4><p>One useful email, every now and then.</p><form><label class="sr-only" for="email">Email address</label><input id="email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">↗</button></form></div></div><div class="footer-bottom"><span>© 2026 Appli Studio. All rights reserved.</span><span>Made with care for curious teams.</span></div></footer>
+  <dialog class="signup-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close signup dialog">×</button><div class="section-kicker">Your next step</div><h2 id="dialog-title">Let’s make something <em>useful.</em></h2><p>Tell us where to send your personalized Appli walkthrough.</p><form class="signup-form"><label for="signup-name">Your name</label><input id="signup-name" name="name" type="text" placeholder="Jamie Smith" required><label for="signup-email">Work email</label><input id="signup-email" name="email" type="email" placeholder="jamie@company.com" required><button class="button button-dark" type="submit">Request a walkthrough <span>↗</span></button><p class="form-status" role="status"></p></form></dialog>
+  <script src="main.js"></script>
+</body>
+</html>
