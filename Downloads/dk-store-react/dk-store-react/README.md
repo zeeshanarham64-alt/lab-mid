@@ -72,10 +72,31 @@ npm start
 
 ## Putting it online
 
-Use any host that runs Node 22 (Render, Railway, Fly.io, a VPS).
+### Render
 
-* Set `COOKIE_SECURE=1` once the site is on https.
-* Keep `data/` on a **persistent disk** (set `DATA_DIR` to it) or orders vanish on restart.
+This project includes a Render Blueprint in `render.yaml`. The service needs a paid
+Starter web service and persistent disk so the SQLite database (orders, users and
+stock) survives deploys and restarts.
+
+1. Push this project to GitHub and sign in to [Render](https://render.com/).
+2. In Render, create a new Blueprint and connect the GitHub repository
+   `zeeshanarham64-alt/lab-mid`. Set the Blueprint file to
+   `Downloads/dk-store-react/dk-store-react/render.yaml`.
+3. When prompted, set `ADMIN_EMAIL`, a strong unique `ADMIN_PASSWORD`, and
+   `WHATSAPP` as digits only with country code (for example, `923001234567`).
+   Do not put these secrets in GitHub.
+4. Review the service and disk pricing, then deploy. Render will show the public
+   URL when the deploy is healthy. The storefront is at that URL and the admin
+   dashboard is at `/admin.html`.
+
+The Blueprint configures HTTPS cookies, a generated session secret, and a
+persistent database directory at `/var/data`. Back up the Render disk regularly.
+
+### Other hosts
+
+Use a host that runs Node 22 (Railway, Fly.io, a VPS).
+Set `COOKIE_SECURE=1` once the site is on HTTPS. Keep `data/` on a **persistent
+disk** (set `DATA_DIR` to it) or orders vanish on restart.
 * Back up `data/store.db` regularly.
 
 ## Not included yet

@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: dk-store
+    runtime: node
+    plan: starter
+    rootDir: Downloads/dk-store-react/dk-store-react
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    disk:
+      name: dk-store-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.1
+      - key: DATA_DIR
+        value: /var/data
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: WHATSAPP
+        sync: false
