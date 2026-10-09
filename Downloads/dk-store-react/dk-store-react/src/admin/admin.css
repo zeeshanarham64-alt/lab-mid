@@ -50,3 +50,8 @@ a.btn{text-decoration:none;display:inline-block}
 .tag.cancelled{color:var(--bad)}
 select.st{padding:5px 8px;font-size:13px}
 .login-card{max-width:420px}.login-card form{display:grid;gap:12px}
+.password-card{margin:0 0 18px}.password-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:end}
+.password-form label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.password-form .msg,.password-form .ok{grid-column:1/-1;min-height:1.4em;margin:0}
+.password-form button{justify-self:start}.password-form button:disabled{opacity:.65;cursor:wait}
+.password-hint{font-size:13px;margin:10px 0 0}

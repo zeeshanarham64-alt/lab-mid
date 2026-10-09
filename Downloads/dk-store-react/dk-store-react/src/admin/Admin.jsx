@@ -71,6 +71,7 @@ function Dashboard({ d, reload }) {
       </div>
       <Products products={products} reload={reload} />
       <Orders orders={orders} reload={reload} />
+      <ChangePassword />
       <div className="card">
         <h2>Customers</h2>
         <div className="scroll"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Orders</th><th>Joined</th></tr></thead>
@@ -79,6 +80,63 @@ function Dashboard({ d, reload }) {
           ))}</tbody></table></div>
       </div>
     </div>
+  );
+}
+
+function ChangePassword() {
+  const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
+  const [saving, setSaving] = useState(false);
+
+  async function submit(e) {
+    e.preventDefault();
+    setMessage("");
+    const form = e.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+    if (values.newPassword !== values.confirmPassword) {
+      setIsError(true);
+      setMessage("The new passwords do not match.");
+      return;
+    }
+
+    setSaving(true);
+    try {
+      await api("/auth/password", "PUT", {
+        currentPassword: values.currentPassword,
+        newPassword: values.newPassword,
+      });
+      form.reset();
+      setIsError(false);
+      setMessage("Password changed successfully.");
+    } catch (x) {
+      setIsError(true);
+      setMessage(x.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <section className="card password-card">
+      <h2>Change password</h2>
+      <form className="password-form" onSubmit={submit}>
+        <label>
+          <span>Current password</span>
+          <input name="currentPassword" type="password" autoComplete="current-password" required />
+        </label>
+        <label>
+          <span>New password</span>
+          <input name="newPassword" type="password" autoComplete="new-password" minLength="8" required />
+        </label>
+        <label>
+          <span>Confirm new password</span>
+          <input name="confirmPassword" type="password" autoComplete="new-password" minLength="8" required />
+        </label>
+        <p className={isError ? "msg" : "ok"} role={isError ? "alert" : "status"}>{message}</p>
+        <button className="btn" type="submit" disabled={saving}>{saving ? "Saving..." : "Change password"}</button>
+      </form>
+      <p className="empty password-hint">Use at least 8 characters, including a letter and a number.</p>
+    </section>
   );
 }
 
