@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#12110f" />
+    <meta
+      name="description"
+      content="Discover AZM car care by DK Store: ceramic shampoo and streak-free glass cleaner. Ask about availability and order on WhatsApp."
+    />
+    <title>DK Store | AZM Car Care</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #201b12;
+        --muted: #716a5e;
+        --paper: #f8f5ed;
+        --card: #fffdf8;
+        --gold: #d8a82e;
+        --line: #e9dfc9;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font: 16px/1.6 "Segoe UI", Arial, sans-serif;
+      }
+      a { color: inherit; }
+      .wrap { width: min(1100px, calc(100% - 36px)); margin: 0 auto; }
+      header { border-bottom: 1px solid var(--line); background: var(--card); }
+      .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; }
+      .brand img { width: 42px; height: 42px; object-fit: contain; border-radius: 50%; }
+      .nav-link { color: var(--muted); text-decoration: none; font-size: 14px; }
+      .hero {
+        min-height: 470px;
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+        gap: 36px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+      }
+      .eyebrow { margin: 0 0 12px; color: #8e6812; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      h1, h2, h3, p { margin-top: 0; }
+      h1 { max-width: 620px; margin-bottom: 18px; font: 600 clamp(44px, 7vw, 76px)/.98 Georgia, serif; letter-spacing: -.04em; }
+      h1 span { color: #a87910; }
+      .lead { max-width: 530px; color: var(--muted); font-size: 18px; }
+      .hero-image { width: 100%; max-height: 370px; object-fit: contain; }
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: var(--gold);
+        color: #211a0d;
+        padding: 10px 20px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+      .button:hover { background: #e8bd56; }
+      .section { padding-top: 36px; padding-bottom: 64px; }
+      .section-heading { margin-bottom: 8px; font: 600 clamp(32px, 5vw, 48px)/1.1 Georgia, serif; }
+      .section-intro { margin-bottom: 24px; color: var(--muted); }
+      .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+      .product { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+      .product img { display: block; width: 100%; height: 245px; padding: 14px; object-fit: contain; background: #f1ecdf; }
+      .product-info { padding: 18px; }
+      .product h3 { margin-bottom: 5px; font: 600 24px/1.15 Georgia, serif; }
+      .product p { min-height: 48px; margin-bottom: 14px; color: var(--muted); }
+      .price { margin-bottom: 14px; font-weight: 800; }
+      .product .button { width: 100%; }
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-radius: 20px;
+        background: #1c1a16;
+        color: #fffaf0;
+        padding: clamp(24px, 5vw, 42px);
+      }
+      .contact h2 { margin-bottom: 8px; font: 600 clamp(28px, 4vw, 40px)/1.1 Georgia, serif; }
+      .contact p { margin-bottom: 0; color: #d2cabc; }
+      footer { padding: 24px 0; color: var(--muted); font-size: 13px; text-align: center; }
+      @media (max-width: 760px) {
+        .hero { min-height: auto; grid-template-columns: 1fr; gap: 16px; padding-top: 44px; }
+        .hero-image { max-height: 260px; }
+        .products { grid-template-columns: 1fr; }
+        .product { display: grid; grid-template-columns: minmax(110px, .8fr) 1.2fr; }
+        .product img { height: 100%; min-height: 210px; }
+        .product p { min-height: 0; }
+        .contact { align-items: flex-start; flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap nav" aria-label="Main navigation">
+        <a class="brand" href="#top">
+          <img src="./img/logo.jpg" alt="" />
+          <span>DK Store</span>
+        </a>
+        <a class="nav-link" href="#products">AZM car care</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="wrap hero">
+        <div>
+          <p class="eyebrow">AZM car care by DK Store</p>
+          <h1>A cleaner <span>shine for every car.</span></h1>
+          <p class="lead">Discover our Ceramic Shampoo and Glass Cleaner. Message us to check availability and place your order directly on WhatsApp.</p>
+          <a class="button" href="#products">Explore products</a>
+        </div>
+        <img class="hero-image" src="./img/deal.jpg" alt="AZM Ceramic Shampoo and Glass Cleaner" />
+      </section>
+
+      <section class="wrap section" id="products">
+        <h2 class="section-heading">AZM car care</h2>
+        <p class="section-intro">Prices are in Pakistani rupees. Contact us to confirm current stock and delivery.</p>
+        <div class="products">
+          <article class="product">
+            <img src="./img/shampoo.jpg" alt="AZM Ceramic Shampoo, 500 ml" />
+            <div class="product-info">
+              <h3>Ceramic Shampoo 500 ml</h3>
+              <p>Deep clean, high gloss, and pH balanced for a gentle wash.</p>
+              <div class="price">Rs 600</div>
+              <a class="button" href="https://wa.me/923141993887?text=Hi%20DK%20Store%2C%20I%27m%20interested%20in%20AZM%20Ceramic%20Shampoo.">Ask on WhatsApp</a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="./img/glass.jpg" alt="AZM Glass Cleaner" />
+            <div class="product-info">
+              <h3>Glass Cleaner</h3>
+              <p>Quick-drying formula for streak-free, crystal-clear glass.</p>
+              <div class="price">Rs 550</div>
+              <a class="button" href="https://wa.me/923141993887?text=Hi%20DK%20Store%2C%20I%27m%20interested%20in%20AZM%20Glass%20Cleaner.">Ask on WhatsApp</a>
+            </div>
+          </article>
+          <article class="product">
+            <img src="./img/deal.jpg" alt="AZM Ceramic Shampoo and Glass Cleaner bundle" />
+            <div class="product-info">
+              <h3>Shampoo + Glass Cleaner</h3>
+              <p>Get both AZM car care products together for Rs 50 off.</p>
+              <div class="price">Rs 1,100 <span style="color:#716a5e;font-weight:400;text-decoration:line-through">Rs 1,150</span></div>
+              <a class="button" href="https://wa.me/923141993887?text=Hi%20DK%20Store%2C%20I%27m%20interested%20in%20the%20AZM%20Shampoo%20and%20Glass%20Cleaner%20deal.">Ask on WhatsApp</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" id="contact">
+        <div class="contact">
+          <div>
+            <h2>Questions or ready to order?</h2>
+            <p>Message DK Store to check availability and arrange delivery.</p>
+          </div>
+          <a class="button" href="https://wa.me/923141993887?text=Hi%20DK%20Store%2C%20I%27d%20like%20to%20ask%20about%20AZM%20car%20care.">Chat on WhatsApp</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">© 2026 DK Store · Orders and availability are confirmed on WhatsApp.</footer>
+  </body>
+</html>

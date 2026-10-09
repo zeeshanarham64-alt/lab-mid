@@ -72,6 +72,15 @@ npm start
 
 ## Putting it online
 
+### Free public demo (GitHub Pages)
+
+The separate `free-site/` folder contains a static product showcase with WhatsApp
+contact links. It has no cart, customer login, admin dashboard, stock management,
+or saved orders. The GitHub Actions workflow publishes it for free at
+`https://zeeshanarham64-alt.github.io/lab-mid/` when changes are pushed to `main`.
+If Pages is not enabled for the repository, enable it under **Settings → Pages**
+and choose **GitHub Actions** as the build and deployment source.
+
 ### Render
 
 This project includes a Render Blueprint in `render.yaml`. The service needs a paid
